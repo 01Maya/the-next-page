@@ -41,8 +41,7 @@ Designed to deliver both aesthetic appeal and functional usability across all de
 
 ## 👀 Preview
 
-Live Preview: 01Maya/the-next-page-BookStore
-
+https://the-next-page.vercel.app/
 ---
 
 ## 📸 Screenshot
