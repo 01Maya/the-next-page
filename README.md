@@ -64,7 +64,7 @@ https://the-next-page.vercel.app/
   npm install
 
 # Run development server
-npm run dev
+  npm run dev
 ````
 
 ---
