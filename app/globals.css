@@ -1,0 +1,685 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Bookstore Literary Color Palette */
+  --color-cream: #F7F3EA;
+  --color-coffee: #6B4F3B;
+  --color-navy: #1E2A38;
+  --color-gold: #C9A66B;
+  --color-beige: #E8DFC9;
+  
+  /* Background */
+  --background: #F7F3EA;
+  --foreground: #1E2A38;
+  --card: #FFFFFF;
+  --card-foreground: #1E2A38;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E2A38;
+  --primary: #6B4F3B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1E2A38;
+  --secondary-foreground: #F7F3EA;
+  --muted: #E8DFC9;
+  --muted-foreground: #6B4F3B;
+  --accent: #C9A66B;
+  --accent-foreground: #1E2A38;
+  --destructive: #DC2626;
+  --destructive-foreground: #F7F3EA;
+  --border: #E8DFC9;
+  --input: #F7F3EA;
+  --ring: #C9A66B;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #1E2A38;
+  --foreground: #F7F3EA;
+  --card: #2D3D4D;
+  --card-foreground: #F7F3EA;
+  --popover: #2D3D4D;
+  --popover-foreground: #F7F3EA;
+  --primary: #C9A66B;
+  --primary-foreground: #1E2A38;
+  --secondary: #F7F3EA;
+  --secondary-foreground: #1E2A38;
+  --muted: #3D4D5D;
+  --muted-foreground: #C9A66B;
+  --accent: #C9A66B;
+  --accent-foreground: #1E2A38;
+  --destructive: #EF4444;
+  --destructive-foreground: #1E2A38;
+  --border: #3D4D5D;
+  --input: #2D3D4D;
+  --ring: #C9A66B;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback';
+  --font-playfair: 'Playfair Display', 'Playfair Display Fallback';
+  --font-caveat: 'Caveat', 'Caveat Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    background-image: 
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(107, 79, 59, 0.02) 2px, rgba(107, 79, 59, 0.02) 4px);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ============================================================================
+   ANIMATION KEYFRAMES
+   ============================================================================ */
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typewriter-cursor {
+  0%, 49% {
+    border-right-color: rgba(107, 79, 59, 0.8);
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes handwriting {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(201, 166, 107, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(201, 166, 107, 0.8);
+  }
+}
+
+@keyframes tilt {
+  0%, 100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  }
+}
+
+@keyframes flip-page {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes page-turn {
+  0% {
+    transform: rotateY(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotateY(90deg) translateZ(0);
+  }
+}
+
+@keyframes parallax-slow {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes parallax-slower {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px rgba(201, 166, 107, 0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 40px rgba(201, 166, 107, 0.8);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes scribble {
+  0% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes highlight-sweep {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes text-highlight {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+.animate-typewriter {
+  animation: typewriter 2s steps(40, end);
+  overflow: hidden;
+  border-right: 3px solid rgba(107, 79, 59, 0.8);
+  white-space: nowrap;
+  animation-fill-mode: forwards;
+}
+
+.animate-typewriter-cursor {
+  animation: typewriter-cursor 0.6s infinite;
+  border-right: 3px solid rgba(107, 79, 59, 0.8);
+}
+
+.animate-handwriting {
+  animation: handwriting 2.5s ease-in-out forwards;
+  stroke-dasharray: 1000;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.7s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.5s ease-out forwards;
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 1.5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-tilt {
+  animation: tilt 4s ease-in-out infinite;
+}
+
+.animate-flip-page {
+  animation: flip-page 0.8s ease-in-out;
+}
+
+.animate-page-turn {
+  animation: page-turn 0.6s ease-out forwards;
+}
+
+.animate-parallax-slow {
+  animation: parallax-slow 8s ease-out forwards;
+}
+
+.animate-slide-out-left {
+  animation: slide-out-left 0.7s ease-out forwards;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.7s ease-out forwards;
+}
+
+.text-highlight {
+  background: linear-gradient(90deg, rgba(201, 166, 107, 0.3) 0%, rgba(201, 166, 107, 0.3) 100%);
+  background-size: 0% 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  animation: text-highlight 0.8s ease-out forwards;
+}
+
+.animate-parallax-slower {
+  animation: parallax-slower 10s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+.animate-scribble {
+  animation: scribble 1.5s ease-in-out forwards;
+}
+
+.animate-highlight-sweep {
+  animation: highlight-sweep 2s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+/* ============================================================================
+   COMPONENT UTILITIES
+   ============================================================================ */
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/30 border border-white/20;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+
+.paper-texture {
+  background-image: 
+    linear-gradient(to right, transparent 0%, transparent calc(100% - 0.5px), rgba(0, 0, 0, 0.03) calc(100% - 0.5px), rgba(0, 0, 0, 0.03) 100%),
+    linear-gradient(to bottom, transparent 0%, transparent calc(100% - 0.5px), rgba(0, 0, 0, 0.03) calc(100% - 0.5px), rgba(0, 0, 0, 0.03) 100%);
+  background-size: 4px 4px;
+}
+
+.page-shadow {
+  @apply shadow-lg;
+  box-shadow: 
+    0 10px 40px rgba(107, 79, 59, 0.1),
+    inset 0 0 30px rgba(0, 0, 0, 0.02);
+}
+
+.book-shadow {
+  @apply drop-shadow-2xl;
+  filter: drop-shadow(0 20px 40px rgba(30, 42, 56, 0.15))
+          drop-shadow(0 0 20px rgba(0, 0, 0, 0.1));
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+.hover-lift-sm {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg;
+  box-shadow: 0 0 20px rgba(201, 166, 107, 0.5);
+}
+
+.hover-glow-active {
+  box-shadow: 0 0 40px rgba(201, 166, 107, 0.8) !important;
+}
+
+
+
+.text-balance-wrapper {
+  text-wrap: balance;
+}
+
+/* Scroll animations - triggered by intersection observer */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-slide-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-slide-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Section padding */
+.section-padding {
+  @apply px-4 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32;
+}
+
+.section-padding-sm {
+  @apply px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20;
+}
+
+/* Hover underline animation */
+.link-underline {
+  @apply relative inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+}
+
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+/* 3D Transforms */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-gpu {
+  will-change: transform;
+}
+
+/* Scroll snap */
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Stagger animation delay */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+.stagger-8 { animation-delay: 0.8s; }
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.transition-smooth-fast {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .hide-mobile {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 641px) {
+  .show-mobile {
+    @apply hidden;
+  }
+}
