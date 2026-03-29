@@ -47,7 +47,7 @@ https://the-next-page.vercel.app/
 
 ## 📸 Screenshot
 
-![Bookstore UI Preview](./bookstore.jpeg)
+![Image](https://github.com/user-attachments/assets/adab860a-d4b3-47d5-b216-ebd7ad66a7fd)
 
 ---
 
