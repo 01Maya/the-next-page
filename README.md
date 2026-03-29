@@ -55,7 +55,7 @@ https://the-next-page.vercel.app/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/bookstore-ui.git
+  git clone https://github.com/your-username/bookstore-ui.git
 
 # Navigate into the project
 cd bookstore-ui
