@@ -61,7 +61,7 @@ https://the-next-page.vercel.app/
 # 2.Navigate into the project
   cd bookstore-ui
 
-# Install dependencies
+# 3.Install dependencies
   npm install
 
 # Run development server
