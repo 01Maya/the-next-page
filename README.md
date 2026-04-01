@@ -58,7 +58,7 @@ https://the-next-page.vercel.app/
 # 1.Clone the repository
   git clone https://github.com/your-username/bookstore-ui.git
 
-# Navigate into the project
+# 2.Navigate into the project
   cd bookstore-ui
 
 # Install dependencies
