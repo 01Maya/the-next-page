@@ -12,7 +12,6 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: 'Bookstore - Where Stories Come Alive',
   description: 'Discover a cozy vintage bookstore experience with a handwritten reading journal. Explore curated books, genres, and stories that inspire.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
