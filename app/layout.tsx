@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: 'Bookstore - Where Stories Come Alive',
+  title: 'Bookstore - Where Stories Come Alive📚',
   description: 'Discover a cozy vintage bookstore experience with a handwritten reading journal. Explore curated books, genres, and stories that inspire.',
   icons: {
     icon: [
