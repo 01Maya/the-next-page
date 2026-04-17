@@ -11,7 +11,7 @@ Designed to deliver both aesthetic appeal and functional usability across all de
 
 ---
 
-## ✨ Features
+## ✨ Features 💎
 - 📱 Fully Responsive Design  
 - 🎬 Smooth Animations & Transitions  
 - 🧭 Section Navigation with Scroll Effects  
