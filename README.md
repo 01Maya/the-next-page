@@ -1,5 +1,5 @@
 
-# 📚 Bookstore UI – Modern Interactive Web Experience
+# 📚 Bookstore UI – Modern Interactive Web Experience ✨
 
 ## 🪄 Overview
 A visually rich and interactive bookstore website built with modern UI/UX principles, smooth animations, and responsive design.
