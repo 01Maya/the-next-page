@@ -1,10 +1,10 @@
 
 # 📚 Bookstore UI – Modern Interactive Web Experience ✨
 
-## 🪄 Overview
+## 🪄 Overview 
 A visually rich and interactive bookstore website built with modern UI/UX principles, smooth animations, and responsive design.
 
-## 🔹 Description
+## 🔹 Description 📄
 This project showcases a premium digital bookstore experience with elegant layouts and immersive interactions.  
 It focuses on storytelling through UI using smooth transitions, hover effects, and section-based navigation.  
 Designed to deliver both aesthetic appeal and functional usability across all devices.
