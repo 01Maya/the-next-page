@@ -19,7 +19,7 @@ Designed to deliver both aesthetic appeal and functional usability across all de
 
 ---
 
-## 🧩 Sections
+## 🧩 Sections 🗂️
 
 - **Hero Section:** Engaging landing with tagline, CTA buttons, and scroll indicator.  
 - **About Us:** Displays vision, mission, and brand story in interactive book layout.  
