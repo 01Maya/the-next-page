@@ -39,7 +39,7 @@ Designed to deliver both aesthetic appeal and functional usability across all de
 
 ---
 
-## 👀 Preview
+## 👀 Preview 🔗
 
 https://the-next-page.vercel.app/
 
