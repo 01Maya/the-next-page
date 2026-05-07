@@ -83,7 +83,7 @@ Open `http://localhost:3000` in your browser to view the project.
 
 ---
 
-## 🤝 Contribution
+## 🤝 Contribution ✍🏻
 
 Feel free to fork this repo and contribute improvements!
 
