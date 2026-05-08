@@ -30,7 +30,7 @@ Designed to deliver both aesthetic appeal and functional usability across all de
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack ⭐️
 
 - ⚡ Next.js  
 - 🎨 Tailwind CSS  
