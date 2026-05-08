@@ -89,7 +89,7 @@ Feel free to fork this repo and contribute improvements!
 
 ---
 
-## 📄 License
+## 📄 License 📁
 
 This project is open-source and available under the MIT License.
 
